@@ -12,12 +12,17 @@ public class DoorCheck : MonoBehaviour
         anim = this.GetComponent<Animator>();
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("Player"))
-        {
-            anim.SetTrigger("Revolve");
-        }
+    //private void OnTriggerEnter(Collider other)
+    //{
+    //    if (other.gameObject.CompareTag("Player"))
+    //    {
+    //        OpenDoor();
+    //    }
 
+    //}
+
+    public void OpenDoor()
+    {
+        anim.SetTrigger("Revolve");
     }
 }
